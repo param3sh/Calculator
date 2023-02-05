@@ -1,12 +1,15 @@
 pipeline {
   agent any
+  tools {
+    maven 'MavenLatest'
+  }
   stages {
     stage ('Build') {
       steps {
-        script {
-          mvnHome = tool 'MavenLatest'
-          mvn compile
-        } 
+        sh '''
+           echo "PATH = ${PATH}"
+           echo "M2_HOME = ${M2_HOME}"
+           '''
       }
     }
   }
