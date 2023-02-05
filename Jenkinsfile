@@ -2,7 +2,10 @@ pipeline {
   agent any
   stages {
     stage ('Build') {
-      steps { echo 'building'}
+      steps {
+        mvnHome = tool 'MavenLatest'
+        $mvnHome\bin\mvn compile
+      }
     }
   }
 }
