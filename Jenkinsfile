@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent 'JnksLnxSlave1'
   tools {
     maven 'MavenLatest'
   }
