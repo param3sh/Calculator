@@ -4,7 +4,7 @@ pipeline {
     stage ('Build') {
       steps {
         mvnHome = tool 'MavenLatest'
-        $mvnHome\bin\mvn compile
+        mvn compile
       }
     }
   }
