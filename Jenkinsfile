@@ -12,10 +12,10 @@ pipeline {
            mvn compile
            '''
       }
-      stage ('package') {
-        steps {
-          sh 'mv package'
-        }
+    }
+    stage ('package') {
+      steps {
+        sh 'mv package'
       }
     }
   }
