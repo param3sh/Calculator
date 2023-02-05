@@ -3,8 +3,10 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-        mvnHome = tool 'MavenLatest'
-        mvn compile
+        script {
+          mvnHome = tool 'MavenLatest'
+          mvn compile
+        } 
       }
     }
   }
