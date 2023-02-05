@@ -1,5 +1,7 @@
 pipeline {
-  agent 'JnksLnxSlave1'
+  agent {
+    label 'tomcat'
+  }
   tools {
     maven 'MavenLatest'
   }
